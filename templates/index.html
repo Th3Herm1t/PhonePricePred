@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Price Prediction</title>
+</head>
+<body>
+    <h1>Mobile Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="ram">RAM (GB):</label><br>
+        <input type="number" id="ram" name="Ram" required><br><br>
+        
+        <label for="rom">ROM (GB):</label><br>
+        <input type="number" id="rom" name="ROM" required><br><br>
+        
+        <label for="mobile_size">Mobile Size (inches):</label><br>
+        <input type="number" step="0.1" id="mobile_size" name="Mobile_Size" required><br><br>
+        
+        <label for="primary_cam">Primary Camera (MP):</label><br>
+        <input type="number" id="primary_cam" name="Primary_Cam" required><br><br>
+        
+        <label for="selfi_cam">Selfie Camera (MP):</label><br>
+        <input type="number" id="selfi_cam" name="Selfi_Cam" required><br><br>
+        
+        <label for="battery_power">Battery Power (mAh):</label><br>
+        <input type="number" id="battery_power" name="Battery_Power" required><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Predicted Price: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
