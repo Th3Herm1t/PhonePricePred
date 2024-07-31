@@ -17,3 +17,7 @@ body {
     font-size: 1.2em;
     font-weight: bold;
 }
+
+.card-body p, .card-body ul {
+    margin-bottom: 1em;
+}
